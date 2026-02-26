@@ -1,18 +1,21 @@
 <template>
   <div>
-    <h2>{{ food.name }}</h2>
+    <h3>{{ food.name }}</h3>
     <p>{{ food.price }}</p>
     <img :src="food.img" alt="" />
   </div>
+  <button @click="ToCart">Add to Cart</button>
 </template>
 
 <script setup>
 defineProps({
-  animal: {
+  food: {
     type: Object,
     required: true,
   },
 })
+
+function Tocart() {}
 </script>
 
 <style scoped>
@@ -21,7 +24,5 @@ div {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 300px;
-  width: 200px;
 }
 </style>

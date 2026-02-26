@@ -2,16 +2,18 @@
   <div>
     <h1>Chinese Restaurant</h1>
     <p>Eat all you want :></p>
-    <div v-for="food in foods" :key="food.name">
-      <h2>{{ food.name }}</h2>
-      <p>{{ food.price }}</p>
-      <img :src="food.img" alt="" />
+    <div class="container">
+      <FoodListCards v-for="food in foods" :key="food.name" :food="food"
+        >{{ food.name }}
+      </FoodListCards>
     </div>
   </div>
 </template>
 
 <script setup>
-const foods = [
+import { ref } from 'vue'
+import FoodListCards from '@/components/FoodListCards.vue'
+const foods = ref([
   { name: 'Tso Chicken', img: 'KungPaoChicken.jpg', price: 12.99 },
   { name: 'Kung Pao Chicken', img: 'TsoChicken.webp', price: 11.99 },
   { name: 'Sweet and Sour Pork', img: 'SweetAndSourPork.jpg', price: 10.99 },
@@ -26,7 +28,7 @@ const foods = [
   { name: 'Wonton Soup', img: 'WontonSoup.jpg', price: 4.99 },
   { name: 'Mongolian Beef', img: 'MongolianBeef.jpg', price: 13.99 },
   { name: 'Egg Foo Young', img: 'EggFooYoung.jpg', price: 11.49 },
-]
+])
 </script>
 
 <style scoped>
