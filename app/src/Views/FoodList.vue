@@ -3,8 +3,8 @@
     <h1>Chinese Restaurant</h1>
     <p>Eat all you want :></p>
     <div class="container">
-      <FoodListCards v-for="food in foods" :key="food.name" :food="food"
-        >{{ food.name }}
+      <FoodListCards v-for="food in foods" :key="food.name" :food="food">
+        <button @click="addCart(food)">Click Me</button>
       </FoodListCards>
     </div>
   </div>
@@ -12,6 +12,9 @@
 
 <script setup>
 import { ref } from 'vue'
+function addCart(food) {
+  console.log(food)
+}
 import FoodListCards from '@/components/FoodListCards.vue'
 const foods = ref([
   { name: 'Tso Chicken', img: 'KungPaoChicken.jpg', price: 12.99 },

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <RouterLink to="/food"></RouterLink>
     <RouterView />
   </div>
 </template>

@@ -4,7 +4,7 @@
     <p>{{ food.price }}</p>
     <img :src="food.img" alt="" />
   </div>
-  <button @click="ToCart">Add to Cart</button>
+  <slot></slot>
 </template>
 
 <script setup>
@@ -14,8 +14,6 @@ defineProps({
     required: true,
   },
 })
-
-function Tocart() {}
 </script>
 
 <style scoped>
@@ -24,5 +22,7 @@ div {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
+  border-radius: 8px;
 }
 </style>
