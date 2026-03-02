@@ -12,9 +12,14 @@
 
 <script setup>
 import { ref } from 'vue'
+
+const alreadybuy = []
+
 function addCart(food) {
-  console.log(food)
+  console.log(alreadybuy)
+  console.log(`${food.name} - ${food.price}`)
 }
+
 import FoodListCards from '@/components/FoodListCards.vue'
 const foods = ref([
   { name: 'Tso Chicken', img: 'KungPaoChicken.jpg', price: 12.99 },
