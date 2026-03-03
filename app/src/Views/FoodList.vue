@@ -7,16 +7,23 @@
         <button @click="addCart(food)">Click Me</button>
       </FoodListCards>
     </div>
+    <h2>Your Order</h2>
+    <ul>
+      <li v-for="item in alreadybuy" :key="item.name">
+        {{ item.name }} - ${{ item.price }} <button @click="">Delete</button>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-const alreadybuy = []
+const alreadybuy = ref([])
 
 function addCart(food) {
-  console.log(alreadybuy)
+  // console.log(alreadybuy)
+  alreadybuy.value.push(food)
   console.log(`${food.name} - ${food.price}`)
 }
 
