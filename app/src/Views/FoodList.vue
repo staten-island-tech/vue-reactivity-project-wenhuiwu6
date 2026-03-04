@@ -24,11 +24,11 @@ const alreadybuy = ref([])
 function addCart(food) {
   // console.log(alreadybuy)
   alreadybuy.value.push(food)
-  console.log(`${food.name} - ${food.price}`)
+  console.log(`${food.name} - $${food.price}`)
 }
 
-function DeleteFood(food) {
-  boughts.remove(food)
+function DeleteFood(item) {
+  boughts.remove(item)
 }
 
 import FoodListCards from '@/components/FoodListCards.vue'
