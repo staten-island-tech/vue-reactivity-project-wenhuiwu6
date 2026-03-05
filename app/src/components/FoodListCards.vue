@@ -16,13 +16,4 @@ defineProps({
 })
 </script>
 
-<style scoped>
-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  border-radius: 8px;
-}
-</style>
+<style scoped></style>

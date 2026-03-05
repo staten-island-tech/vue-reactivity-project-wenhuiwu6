@@ -10,7 +10,7 @@
     <h2>Your Order</h2>
     <ul>
       <li v-for="item in alreadybuy" :key="item.name">
-        {{ item.name }} - ${{ item.price }} <button @click="DeleteFood()">Delete</button>
+        {{ item.name }} - ${{ item.price }} <button @click="DeleteFood(item)">Delete</button>
       </li>
     </ul>
   </div>
@@ -28,7 +28,7 @@ function addCart(food) {
 }
 
 function DeleteFood(item) {
-  boughts.remove(item)
+  alreadybuy.value = alreadybuy.value.filter((t) => t !== item)
 }
 
 import FoodListCards from '@/components/FoodListCards.vue'
