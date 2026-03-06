@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="displayOnScreen">
     <h3>{{ food.name }}</h3>
     <p>{{ food.price }}</p>
     <img :src="food.img" alt="" />
@@ -16,4 +16,15 @@ defineProps({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.displayOnScreen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.displayOnScreen img {
+  width: 20%;
+  border-radius: 8px;
+}
+</style>
