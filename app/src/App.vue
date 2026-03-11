@@ -42,7 +42,7 @@ function totalPrice() {
   for (let item of alreadybuy.value) {
     total += item.price
   }
-  return total
+  return total.toFixed(2)
 }
 
 const foods = ref([
