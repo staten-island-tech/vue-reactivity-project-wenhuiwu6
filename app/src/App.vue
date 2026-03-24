@@ -1,6 +1,6 @@
 <template>
   <div class="everything">
-    <h1>Chinese Restaurant</h1>
+    <h1>#1 Panda Express Restaurant</h1>
     <p>Eat all you want :></p>
     <div class="container">
       <FoodListCards v-for="food in foods" :key="food.name" :food="food" class="card">
